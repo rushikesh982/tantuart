@@ -1,0 +1,35 @@
+.navLogo img
+{
+    height: 40px;
+}
+.navOuter
+{
+    height: 70px;
+    background-color: rgb(141, 102, 13);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0px 22px;
+    justify-content: space-between;
+}
+.navOuter ul
+{
+    list-style-type: none;
+    display: flex;
+    gap: 3vh;
+    font-size: 1.3vmax;
+}
+.navRight ul li i
+{
+    font-size: 17px;
+}
+
+@media (max-width:769px) {
+    .navItem{
+        display: none;
+    }
+    .navOuter{
+        justify-content: space-between;
+        padding: 0px 17px;
+    }
+}
