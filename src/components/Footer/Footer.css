@@ -1,0 +1,36 @@
+.footer-main{
+    height: auto;
+    width: auto;
+    padding: 1vw;
+    background-color: #232323;
+}
+.company-info ul{
+    list-style: none;
+    color: white;
+}
+.company-info ul li{
+    margin-top: 1vw;
+}
+.shop ul{
+    list-style: none;
+    color: white;
+}
+.useful-link ul {
+    list-style: none;
+    color: white;
+}
+.contact-us ul{
+    list-style: none;
+    color: white;
+}
+.email{
+    height: auto;
+    width: 50%;
+    padding: 10px 20px;
+    display: flex;
+    background-color: aqua;
+    
+
+}
+
+
