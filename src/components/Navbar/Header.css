@@ -13,7 +13,7 @@
 
 /* Base Styles */
 .navbar {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -146,77 +146,6 @@
   cursor: pointer;
   padding: 0.5rem;
 }
-
-/* modal */
-.loginForm,table
-{
-  width: 500px;
-  /* text-align: center; */
-}
-.loginForm table input,span
-{
-  margin-top: 10px;
-  height:35px;
-  width: 90%;
-  outline: none;
-  padding-left: 6px;
-  /* border: none; */
-}
-.loginForm table span
-{
-  font-size: 16px;
-  font-weight: 600;
-}
-.show_pass
-{
-  height: 15px !important;
-  width: auto !important;
-}
-.loginForm table input::placeholder
-{
-  text-transform: capitalize;
-  /* margin-left: 15px; */
-  padding-left: 10px !important;
-}
-
-.btnbox
-{
-  text-align: center;
-  align-items: center;
-}
-.logbtn
-{
-  align-items: center;
-  margin-top: 15px;
-  padding: 3px 17px;
-  height: 40px;
-  width: 70%;
-  border-radius: 5px;
-  border: 1px solid black;
-  outline: none;
-  color: black;
-  font-weight: 600;
-  transform: translatex(-7%);
-  /* background-color: red; */
-}
-.logbtn:hover
-{
-  background-color: black;
-  color: white;
-
-}
-.f-pass-login
-{
-  transform: translatex(-7%);
-  text-align: center;
-}
-.f-pass-login p
-{
-  line-height: 11px;
-}
-/* model end */
-
-
 @media (max-width: 992px) {
   .navbar-container {
     padding: 0 1.5rem;
