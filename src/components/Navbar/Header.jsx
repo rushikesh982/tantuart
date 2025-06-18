@@ -127,14 +127,14 @@ const Header = () => {
                         <td><span>Enter your Email</span></td>
                     </tr>
                     <tr>
-                        <td><input type="text" name="u_email" placeholder='enter your email...' /></td>
+                        <td><input type="text" name="u_email" placeholder='enter your email...' required /></td>
                     </tr>
                     <tr>
                         <td><span>Enter Your Password</span></td>
                     </tr>
                     <tr>
                         <td>
-                            <input type={showPass?'text':'password'} name="u_pass" placeholder='enter password..' />
+                            <input type={showPass?'text':'password'} name="u_pass" placeholder='enter password..' required />
                             </td>
                     </tr>
                     <tr>
