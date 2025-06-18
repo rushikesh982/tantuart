@@ -3,7 +3,11 @@ import './WorkShop.css';
 
 const WorkShop = () => {
   return (
-    <div>WorkShop</div>
+    <div className='box mt-5'>
+    
+    </div>
+    
+    
   )
 }
 
