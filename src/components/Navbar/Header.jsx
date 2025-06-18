@@ -113,51 +113,62 @@ const Header = () => {
 
 {/* <!-- Modal --> */}
 <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div className="modal-dialog">
-    <div className="modal-content">
-      <div className="modal-header">
-        <h1 className="modal-title fs-5 fw-bolder" id="exampleModalLabel">LogIn</h1>
+  <div className="modal-dialog modal-dialog-centered">
+    <div className="modal-content rounded-4 shadow">
+      <div className="modal-header border-bottom-0">
+        <h1 className="modal-title fs-4 fw-bold text-primary" id="exampleModalLabel">Welcome Back</h1>
         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div className="modal-body">
-                     <form action="/login" method="post" className="loginForm">
-            <table>
-                <tbody>
-                    <tr>
-                        <td><span>Enter your Email</span></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="u_email" placeholder='enter your email...' /></td>
-                    </tr>
-                    <tr>
-                        <td><span>Enter Your Password</span></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type={showPass?'text':'password'} name="u_pass" placeholder='enter password..' />
-                            </td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" onClick={()=>{SetShowPass(!showPass)}} name="" className='show_pass' id="" />
-                            <span>show password</span></td>
-                    </tr>
-                    <tr className='btnbox'>
-                        <td><button className='logbtn' type="submit">LogIn</button></td>
-                    </tr>
-                    <tr>
-                        <td className='f-pass-login'>
-                            <p className='text-capitalize mt-3'>forget <a href="">password ?</a></p>
-                            <p className='text-capitalize'>don't have an account ? <a href="/">sign up</a></p>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+      <div className="modal-body py-4 px-4 px-md-5">
+        <form action="/login" method="post" className="loginForm">
+          <div className="form-floating mb-3">
+            <input 
+              type="email" 
+              className="form-control rounded-3" 
+              id="floatingInput" 
+              name="u_email" 
+              placeholder="name@example.com" 
+              required
+            />
+            <label htmlFor="floatingInput">Email address</label>
+          </div>
+          
+          <div className="form-floating mb-3">
+            <input 
+              type={showPass ? 'text' : 'password'} 
+              className="form-control rounded-3" 
+              id="floatingPassword" 
+              name="u_pass" 
+              placeholder="Password" 
+              required
+            />
+            <label htmlFor="floatingPassword">Password</label>
+          </div>
+          
+          <div className="form-check mb-3">
+            <input 
+              className="form-check-input" 
+              type="checkbox" 
+              onClick={() => SetShowPass(!showPass)}
+              id="flexCheckDefault"
+            />
+            <label className="form-check-label text-muted" htmlFor="flexCheckDefault">
+              Show password
+            </label>
+          </div>
+          
+          <button className="w-100 btn btn-lg btn-primary rounded-3 mb-3" type="submit">
+            LOG IN
+          </button>
+          
+          <div className="text-center mt-4">
+            <a href="#" className="text-decoration-none text-muted small">Forgot password?</a>
+            <p className="mt-2 mb-0 text-muted small">
+              Don't have an account? <NavLink to={'/signIn'}><p className="d-inline text-primary text-decoration-none nav-link" data-bs-dismiss="modal">Sign up</p></NavLink>
+            </p>
+          </div>
         </form>
       </div>
-      {/* <div className="modal-footer">
-        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" className="btn btn-primary">Save changes</button>
-      </div> */}
     </div>
   </div>
 </div>
