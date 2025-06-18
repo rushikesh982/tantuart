@@ -3,7 +3,7 @@ import './Shop.css'
 
 const Shop = () => {
   return (
-    <div>Shop</div>
+    <div className='text-danger'>Shop</div>
   )
 }
 
