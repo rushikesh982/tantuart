@@ -191,7 +191,34 @@
     display: none;
   }
 }
+.loginmob {
+  cursor: pointer;
+  display: inline-block;
+}
 
+.loginmob span {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+}
+
+.loginmob .hover-underline {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  transition: width 0.3s ease;
+}
+
+.loginmob:hover {
+  color: red;
+}
+
+.loginmob:hover .hover-underline {
+  width: 100%;
+}
 @media (max-width: 480px) {
   .navbar-container {
     padding: 0 1rem;
