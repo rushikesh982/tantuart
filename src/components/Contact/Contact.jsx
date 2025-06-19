@@ -11,7 +11,7 @@ const Contact = () => {
     <>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-12 contact-outer">
+          <div className="col-12 contact-outer p-0 overflow-hidden">
             <div className={`ani-contact ${ani ? "ani-show" : ""}`}>
               <h1 className={`heading ${ani ? "show-heading" : ""}`}>WE ARE HERE FOR YOU</h1>
             </div>

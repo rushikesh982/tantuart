@@ -1,18 +1,18 @@
-
 .workshop_banner{
     height: 30vw;
     width: 100%;
     background-color: black;
     padding: 0;
 }
-.banner{
-    position: fixed;
-    right: -1200vw;
-    transition: 0.7s;
+
+
+
+.banner {
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
-.show{
-    position: relative;
-    right: 0;
+.banner.show {
+  opacity: 1;
 }
 .box
 {
