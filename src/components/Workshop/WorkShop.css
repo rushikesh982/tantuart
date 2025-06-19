@@ -1,15 +1,19 @@
-.workshop_banner{
-    height: 30vw;
-    width: 100%;
-    background-color: black;
-    padding: 0;
+.workshop_banner::-webkit-scrollbar {
+  display: none;
 }
-.banner{
-    position: fixed;
-    right: -1200vw;
-    transition: 0.7s;
+
+.workshop_banner {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  /* Firefox */
+  overflow-y: scroll; 
 }
-.show{
-    position: relative;
-    right: 0;
+
+
+
+.banner {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.banner.show {
+  opacity: 1;
 }

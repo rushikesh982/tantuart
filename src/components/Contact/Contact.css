@@ -4,6 +4,9 @@
    background-color:black;
    padding: 0; 
 }
+.contact-outer::-webkit-scrollbar {
+    display: none;
+}
 .ani-contact{
     height: 100%;
     width: 100%;
