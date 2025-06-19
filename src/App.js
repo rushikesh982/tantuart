@@ -7,6 +7,7 @@ import WorkShop from './components/Workshop/WorkShop';
 import InteriorProjects from './components/InteriorProjects/InteriorProjects';
 import Contact from './components/Contact/Contact';
 import OurStory from './components/OurStory/OurStory';
+import SignIn from './components/Navbar/SignIn';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path='/interiorProjects'element={<InteriorProjects/>}></Route>
             <Route path='/contact' element={<Contact/>}></Route>
             <Route path='/ourStory' element={<OurStory/>}></Route>
+            <Route path='/signIn' element={<SignIn/>}></Route>
           </Routes> 
           <Footer/>
          </BrowserRouter>

@@ -45,5 +45,8 @@ const Shop = () => {
     </div>
   );
 };
+    <div className='text-danger'>Shop</div>
+  )
+}
 
 export default Shop;
