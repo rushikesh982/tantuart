@@ -1,0 +1,15 @@
+.workshop_banner{
+    height: 30vw;
+    width: 100%;
+    background-color: black;
+    padding: 0;
+}
+.banner{
+    position: fixed;
+    right: -1200vw;
+    transition: 0.7s;
+}
+.show{
+    position: relative;
+    right: 0;
+}
