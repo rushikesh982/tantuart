@@ -84,6 +84,21 @@ const Header = () => {
                                 OUR STORY
                             </NavLink>
                         </li>
+                        <li 
+  className="d-block d-md-none loginmob" 
+  aria-label="Account" 
+  data-bs-toggle="modal" 
+  data-bs-target="#exampleModal"
+  onClick={() => {
+    setActiveTab('login');
+    setMobileMenuOpen(false);
+  }}
+>
+  <span>
+    LOGIN
+    <span className="hover-underline"></span>
+  </span>
+</li>
                     </ul>
                 </div>
 
