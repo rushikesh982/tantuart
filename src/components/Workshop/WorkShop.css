@@ -1,11 +1,8 @@
-.workshop_banner::-webkit-scrollbar {
-  display: none;
-}
-
-.workshop_banner {
-  -ms-overflow-style: none;  
-  scrollbar-width: none;  /* Firefox */
-  overflow-y: scroll; 
+.workshop_banner{
+    height: 30vw;
+    width: 100%;
+    background-color: black;
+    padding: 0;
 }
 
 
@@ -16,4 +13,10 @@
 }
 .banner.show {
   opacity: 1;
+}
+.box
+{
+    height: 500px;
+    width: 500px;
+    background-color: red ;
 }
