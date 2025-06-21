@@ -1,10 +1,32 @@
-import React from 'react';
-import './InteriorProjects.css'
+import React, { useEffect, useState } from 'react';
+import './InteriorProjects.css';
+import { InteriorData } from './InteriorData';
 
 const InteriorProjects = () => {
-  return (
-    <div>InteriorProjects</div>
-  )
-}
+  const [showImage, setShowImage] = useState(false);
 
-export default InteriorProjects
+  useEffect(() => {
+    const timer = setTimeout(() => setShowImage(true), 100); 
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <div className="container-fluid p-0">
+      <div className="row p-0">
+        {
+          InteriorData.map((item, index) => (
+            <div className="col-12" key={index}>
+              <img
+                className={`interiorBanner ${showImage ? 'show' : ''}`}
+                src={item.img}
+                alt=""
+              />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  );
+};
+
+export default InteriorProjects;
