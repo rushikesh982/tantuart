@@ -1,11 +1,9 @@
-.workshop_banner{
-    height: 30vw;
-    width: 100%;
-    background-color: black;
-    padding: 0;
+.workshop_banner {
+  height: 30vw;
+  width: 100%;
+  background-color: black;
+  padding: 0;
 }
-
-
 
 .banner {
   opacity: 0;
@@ -14,9 +12,8 @@
 .banner.show {
   opacity: 1;
 }
-.box
-{
-    height: 500px;
-    width: 500px;
-    background-color: red ;
+.box {
+  height: 500px;
+  width: 500px;
+  background-color: red;
 }
