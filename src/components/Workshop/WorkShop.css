@@ -9,56 +9,152 @@
   opacity: 0;
   transition: opacity 0.5s ease;
 }
+
 .banner.show {
   opacity: 1;
 }
-.box
-{
-    height: 500px;
-    width: 500px;
-    background-color: red ;
-}
-.workshop-detail ul li{
-    list-style: none;
-    font-size: 0.9vw;
-    font-weight: 500;
-}
-.workshop-detail h1{
-  font-size: 2vw;
-}
-.workshop-detail button{
-   border: 1px solid black;
-   font-size: 1.1vw;
-   letter-spacing: 10px;
-   font-weight: 500;
 
-}
-.review h1{
-  font-size: 2vw;
-  /* background: rgba(128, 128, 128, 0.194); */
-
-}
-.outer-div {
-  overflow-x:hidden;
-  /* white-space: nowrap; */
-  display: flex;
-  gap: 1rem;
-  padding-bottom: 1rem; /* Add some space for scrollbar */
-  
-}
-.box-1 {
-  height: 20vw;
-  width: 20vw;
-  text-align: center;
-  min-width: 250px;
-  padding: 2vw;
-  background: #923434;
-  border-radius: 8px;
-  transition: 5a;
-  flex: 0 0 auto; /* Prevent flex items from shrinking */
-}
 .box {
   height: 500px;
   width: 500px;
   background-color: red;
+}
+
+.workshop-detail ul li {
+  list-style: none;
+  font-size: 0.9vw;
+  font-weight: 500;
+}
+
+.workshop-detail h1 {
+  font-size: 2vw;
+}
+
+.workshop-detail button {
+  border: 1px solid black;
+  font-size: 1.1vw;
+  letter-spacing: 10px;
+  font-weight: 500;
+
+}
+
+.review h1 {
+  font-size: 2vw;
+  /* background: rgba(128, 128, 128, 0.194); */
+
+}
+
+.outer-div {
+  overflow-x: hidden;
+  /* white-space: nowrap; */
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  /* Add some space for scrollbar */
+
+}
+
+.box-1 {
+
+  text-align: center;
+  min-width: 250px;
+  padding: 2vw;
+  background: white;
+  border-radius: 8px;
+  transition: 5a;
+  /* border: 1px solid black; */
+  flex: 0 0 auto;
+  /* Prevent flex items from shrinking */
+}
+
+.box {
+  height: 500px;
+  width: 500px;
+  background-color: red;
+}
+
+.slide {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  display: none;
+  /* Hidden by default */
+}
+
+.slide.active {
+  display: block;
+  /* Show active slide */
+}
+
+.stars {
+  color: gold;
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.review-content {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.review-footer {
+  display: flex;
+  justify-content: space-between;
+  color: #777;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.review-title {
+  font-weight: bold;
+}
+
+.review-date {
+  opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+  .slide {
+    padding: 20px;
+  }
+
+  .review-content {
+    font-size: 14px;
+  }
+
+  .stars {
+    font-size: 20px;
+  }
+
+  .review-footer {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .workshop-detail ul li {
+    list-style: none;
+    font-size: 2vw;
+    font-weight: 500;
+  }
+
+  .workshop-detail h1 {
+    font-size: 4vw;
+  }
+
+  .workshop-detail button {
+    border: 1px solid black;
+    padding: 3vw;
+    font-size:2vw;
+    letter-spacing: 10px;
+    font-weight: 800;
+
+  }
 }
