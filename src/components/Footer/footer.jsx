@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="col-12 col-sm-12 col-md-6 col-lg-4 company-info">
           <div className='responsive-icon' onClick={() => setdropdown(!dropdown)}>
             <h1>COMPANY INFO</h1>
-            <i class="ri-arrow-down-s-line"></i>
+            <i className="ri-arrow-down-s-line"></i>
           </div>
           <ul className={dropdown ? "show" : ""}>
             <li><img src={footer_icon} className='w-100' alt="" /></li>
@@ -26,7 +26,7 @@ const Footer = () => {
         <div className="ccol-12 col-sm-12 col-md-6 col-lg-2 shop">
           <div className='responsive-icon' onClick={() => setshop(!shop)}>
             <h1>SHOP</h1>
-            <i class="ri-arrow-down-s-line"></i>
+            <i className="ri-arrow-down-s-line"></i>
           </div>
           <ul className={shop ? "show" : ""}>
             <li><p>Customisable</p></li>
@@ -40,7 +40,7 @@ const Footer = () => {
          
            <div className='responsive-icon' onClick={() => setuseful(!useful)}>
             <h1>USEFUL LINK</h1>
-            <i class="ri-arrow-down-s-line"></i>
+            <i className="ri-arrow-down-s-line"></i>
           </div>
           <ul className={useful? "show" : ""}>
             <li><p>Privacy & Policy</p></li>
@@ -56,16 +56,16 @@ const Footer = () => {
         <div className="col-12 col-sm-12 col-md-6 col-lg-4 contact-us">
            <div className='responsive-icon' onClick={() => setcontact(!contact)}>
             <h1>SIGN UP AND SAVE</h1>
-            <i class="ri-arrow-down-s-line"></i>
+            <i className="ri-arrow-down-s-line"></i>
           </div>
           <ul className={contact?"show":""}>
             <li>
               <div className='email'>
                 <input type="text" name="" placeholder='Enter your email' id="" />
-                <i class="ri-mail-line"></i>
+                <i className="ri-mail-line"></i>
               </div>
             </li>
-            <li><i class="ri-instagram-line"></i></li>
+            <li><i className="ri-instagram-line"></i></li>
           </ul>
         </div>
         <div className="col-12 footer-end">
