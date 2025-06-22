@@ -29,6 +29,7 @@ const Shop = () => {
               <div className="product-card">
                 <div className="product-image">
                   {item.onSale && <div className="sale-badge">SALE</div>}
+                  <img src={item.img} className='img-fluid product-img' alt={item.name} />
                   <img
                     src={item.image || img}
                     className="img-fluid product-img"
