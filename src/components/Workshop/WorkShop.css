@@ -20,3 +20,43 @@
     width: 500px;
     background-color: red ;
 }
+.workshop-detail ul li{
+    list-style: none;
+    font-size: 0.9vw;
+    font-weight: 500;
+}
+.workshop-detail h1{
+  font-size: 2vw;
+}
+.workshop-detail button{
+   border: 1px solid black;
+   font-size: 1.1vw;
+   letter-spacing: 10px;
+   font-weight: 500;
+
+}
+.review h1{
+  font-size: 2vw;
+  /* background: rgba(128, 128, 128, 0.194); */
+
+}
+.outer-div {
+  overflow-x:hidden;
+  /* white-space: nowrap; */
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1rem; /* Add some space for scrollbar */
+  
+}
+
+.box-1 {
+  height: 20vw;
+  width: 20vw;
+  text-align: center;
+  min-width: 250px;
+  padding: 2vw;
+  background: #923434;
+  border-radius: 8px;
+  transition: 5a;
+  flex: 0 0 auto; /* Prevent flex items from shrinking */
+}
