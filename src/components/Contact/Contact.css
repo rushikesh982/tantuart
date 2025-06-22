@@ -1,71 +1,60 @@
-.contact-outer{
-   height: 20vw;
-   width: 100%;
-   background-color:black;
-   padding: 0; 
+.contact-outer {
+  height: 20vw;
+  width: 100%;
+  background-color: black;
+  padding: 0;
 }
 .contact-outer::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
-.ani-contact{
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(to right, #00c6ff, #0072ff);
-    transition: 0.7s;
-    position: fixed;
-    right: -100%;
-    /* display: none; */
-    
-
-    
-    
-  
+.ani-contact {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  transition: 0.7s;
+  position: fixed;
+  right: -100%;
+  /* display: none; */
 }
-.ani-show{
-    position: relative;
-    right: 0;
-    /* display: block; */
-
-    
+.ani-show {
+  position: relative;
+  right: 0;
+  /* display: block; */
 }
 .heading {
-    font-size: 3vw;
-    font-weight: 900;
-    color: white;
-    padding-top: 8vw;
-    text-align: center;
-    position: fixed;
-    bottom: -9900px;
-    transition: 0.5s;
-    word-spacing: 10px;
-
+  font-size: 3vw;
+  font-weight: 900;
+  color: white;
+  padding-top: 8vw;
+  text-align: center;
+  position: fixed;
+  bottom: -9900px;
+  transition: 0.5s;
+  word-spacing: 10px;
 }
-.show-heading{
-    position: relative;
-    top: 0%;
-     
+.show-heading {
+  position: relative;
+  top: 0%;
 }
 
-.contact-form label{
-    font-size: 1vw;
-    font-weight:200;
+.contact-form label {
+  font-size: 1vw;
+  font-weight: 200;
 }
-
 
 .live-help {
-    padding: 2vw;
+  padding: 2vw;
 }
-.live-help ul li{
-    list-style: none;
+.live-help ul li {
+  list-style: none;
 }
-@media (max-width:800px) {
-    .contact-form label{
-        font-size: 3vw;
-    }
-    .contact-form input{
-        height: 10vw;
-        width: 100%;
-        /* border: 1px solid black; */
-    }
-    
+@media (max-width: 800px) {
+  .contact-form label {
+    font-size: 3vw;
+  }
+  .contact-form input {
+    height: 10vw;
+    width: 100%;
+    /* border: 1px solid black; */
+  }
 }

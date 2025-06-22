@@ -1,11 +1,9 @@
-.workshop_banner{
-    height: 30vw;
-    width: 100%;
-    background-color: black;
-    padding: 0;
+.workshop_banner {
+  height: 30vw;
+  width: 100%;
+  background-color: black;
+  padding: 0;
 }
-
-
 
 .banner {
   opacity: 0;
@@ -48,7 +46,6 @@
   padding-bottom: 1rem; /* Add some space for scrollbar */
   
 }
-
 .box-1 {
   height: 20vw;
   width: 20vw;
@@ -59,4 +56,8 @@
   border-radius: 8px;
   transition: 5a;
   flex: 0 0 auto; /* Prevent flex items from shrinking */
+.box {
+  height: 500px;
+  width: 500px;
+  background-color: red;
 }

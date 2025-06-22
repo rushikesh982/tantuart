@@ -11,21 +11,18 @@ import SignIn from './components/Navbar/SignIn';
 
 function App() {
   return (
-    <div>
-        
-         <BrowserRouter>
-        <Header/>
-          <Routes>
-            <Route path='/' element={<Shop/>}></Route>
-            <Route path='/workshop' element={<WorkShop/>}/>
-            <Route path='/interiorProjects'element={<InteriorProjects/>}></Route>
-            <Route path='/contact' element={<Contact/>}></Route>
-            <Route path='/ourStory' element={<OurStory/>}></Route>
-            <Route path='/signIn' element={<SignIn/>}></Route>
-          </Routes> 
-          <Footer/>
-         </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Shop />}></Route>
+        <Route path='/workshop' element={<WorkShop />} />
+        <Route path='/interiorProjects' element={<InteriorProjects />}></Route>
+        <Route path='/contact' element={<Contact />}></Route>
+        <Route path='/ourStory' element={<OurStory />}></Route>
+        <Route path='/signIn' element={<SignIn />}></Route>
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 }
 
