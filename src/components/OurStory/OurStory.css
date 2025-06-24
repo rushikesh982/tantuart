@@ -1,0 +1,29 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.storyBox img
+{
+    height: 300px;
+    width: 100%;
+}
+.imgBox img
+{
+    height: 400px;
+    width: 400px;
+}
+.textBox
+{
+    height: auto;
+    width: 500px;
+}
+.infoContainer
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: #f5bac0;
+}
