@@ -8,6 +8,7 @@ import InteriorProjects from './components/InteriorProjects/InteriorProjects';
 import Contact from './components/Contact/Contact';
 import OurStory from './components/OurStory/OurStory';
 import SignIn from './components/Navbar/SignIn';
+import Cart from './components/cart/Cart';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/contact' element={<Contact />}></Route>
         <Route path='/ourStory' element={<OurStory />}></Route>
         <Route path='/signIn' element={<SignIn />}></Route>
+        <Route path='/cart' element={<Cart/>}/>
       </Routes>
       <Footer />
     </BrowserRouter>
