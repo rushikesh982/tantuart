@@ -64,7 +64,7 @@ const Header = () => {
                   to="/interiorProjects"
                   className={activeTab === "interiorProject" ? "active" : ""}
                   onClick={() => {
-                    setActiveTab("interiorProject"); // ✅ fix spelling
+                    setActiveTab("interiorProject");
                     setMobileMenuOpen(false);
                   }}
                 >
@@ -125,10 +125,12 @@ const Header = () => {
             <button className="nav-icon" aria-label="Search">
               <i className="ri-search-line"></i>
             </button>
-            <button className="nav-icon" aria-label="Cart">
+            <NavLink to='/cart'>
+              <button className="nav-icon" aria-label="Cart">
               <i className="ri-shopping-cart-2-line"></i>
               <span className="cart-badge">0</span>
             </button>
+            </NavLink>
             <button
               className="mobile-menu-toggle"
               onClick={toggleMobileMenu}
