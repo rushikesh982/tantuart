@@ -12,6 +12,19 @@ const Header = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
+  // Shop categories data
+  const shopCategories = [
+    { name: "String Art", path: "/shop/string-art" },
+    { name: "Texture Art", path: "/shop/texture-art" },
+    { name: "Embroidery Art", path: "/shop/embroidery-art" },
+    { name: "Quartz Sand Art", path: "/shop/quartz-sand-art" },
+    { name: "Geometry Texture Art", path: "/shop/geometry-texture-art" },
+    { name: "Lippan Art", path: "/shop/lippan-art" },
+    { name: "Modern Art", path: "/shop/modern-art" },
+    { name: "Hand Painted Canvas", path: "/shop/hand-painted-canvas" },
+    { name: "3D Wall Art", path: "/shop/3d-wall-art" }
+  ];
+
   useEffect(() => {
     const timer = setTimeout(() => {
       const modal = new window.bootstrap.Modal(
@@ -35,17 +48,36 @@ const Header = () => {
 
           <div className={`navbar-links ${mobileMenuOpen ? "active" : ""}`}>
             <ul>
-              <li>
+              <li className="dropdown-container">
                 <NavLink
-                  to="/"
+                  to="/shop"
                   className={activeTab === "shop" ? "active" : ""}
-                  onClick={() => {
+                  onClick={(e) => {
+                    if (window.innerWidth <= 768) {
+                      e.preventDefault();
+                    }
                     setActiveTab("shop");
-                    setMobileMenuOpen(false);
                   }}
                 >
-                  SHOP
+                  SHOP <i className="ri-arrow-down-s-line dropdown-arrow"></i>
                 </NavLink>
+                <div className="dropdown-menu">
+                  <div className="dropdown-grid">
+                    {shopCategories.map((category) => (
+                      <NavLink
+                        key={category.path}
+                        to={category.path}
+                        className="dropdown-item"
+                        onClick={() => {
+                          setActiveTab(category.path);
+                          setMobileMenuOpen(false);
+                        }}
+                      >
+                        {category.name}
+                      </NavLink>
+                    ))}
+                  </div>
+                </div>
               </li>
               <li>
                 <NavLink
@@ -127,9 +159,9 @@ const Header = () => {
             </button>
             <NavLink to='/cart'>
               <button className="nav-icon" aria-label="Cart">
-              <i className="ri-shopping-cart-2-line"></i>
-              <span className="cart-badge">0</span>
-            </button>
+                <i className="ri-shopping-cart-2-line"></i>
+                <span className="cart-badge">0</span>
+              </button>
             </NavLink>
             <button
               className="mobile-menu-toggle"
