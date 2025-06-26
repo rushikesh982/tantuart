@@ -54,7 +54,7 @@ const Header = () => {
                     setActiveTab("shop");
                   }}>
                 <NavLink
-                  to="/shop"
+                  // to="/shop"
   
                   
                 >
