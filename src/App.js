@@ -9,6 +9,9 @@ import Contact from './components/Contact/Contact';
 import OurStory from './components/OurStory/OurStory';
 import SignIn from './components/Navbar/SignIn';
 import Cart from './components/cart/Cart';
+import StringArt from './components/Shop/subOption/StringArt/StringArt';
+import TextureArt from './components/Shop/subOption/TextureArt/TextureArt';
+import EmbroideryArt from './components/Shop/subOption/Embroidery/EmbroideryArt';
 
 function App() {
   return (
@@ -22,6 +25,9 @@ function App() {
         <Route path='/ourStory' element={<OurStory />}></Route>
         <Route path='/signIn' element={<SignIn />}></Route>
         <Route path='/cart' element={<Cart/>}/>
+        <Route path='/string-art' element={<StringArt/>}></Route>
+        <Route path='/texture-art' element={<TextureArt/>}></Route>
+        <Route path='/embroidery-art' element={<EmbroideryArt/>}></Route>
       </Routes>
       <Footer />
     </BrowserRouter>

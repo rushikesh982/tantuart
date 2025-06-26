@@ -4,25 +4,24 @@ import Logo from "../Assets/footerLogo.webp";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
-  const [activeTab, setActiveTab] = useState("shop");
+  const [activeTab, setActiveTab] = useState('/');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showPass, SetShowPass] = useState(false);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
-
   // Shop categories data
   const shopCategories = [
-    { name: "String Art", path: "/shop/string-art" },
-    { name: "Texture Art", path: "/shop/texture-art" },
-    { name: "Embroidery Art", path: "/shop/embroidery-art" },
-    { name: "Quartz Sand Art", path: "/shop/quartz-sand-art" },
-    { name: "Geometry Texture Art", path: "/shop/geometry-texture-art" },
-    { name: "Lippan Art", path: "/shop/lippan-art" },
-    { name: "Modern Art", path: "/shop/modern-art" },
-    { name: "Hand Painted Canvas", path: "/shop/hand-painted-canvas" },
-    { name: "3D Wall Art", path: "/shop/3d-wall-art" }
+    { name: "String Art", path: "string-art" },
+    { name: "Texture Art", path: "texture-art" },
+    { name: "Embroidery Art", path: "embroidery-art" },
+    { name: "Quartz Sand Art", path: "quartz-sand-art" },
+    { name: "Geometry Texture Art", path: "geometry-texture-art" },
+    { name: "Lippan Art", path: "lippan-art" },
+    { name: "Modern Art", path: "modern-art" },
+    { name: "Hand Painted Canvas", path: "hand-painted-canvas" },
+    { name: "3D Wall Art", path: "3d-wall-art" }
   ];
 
   useEffect(() => {
@@ -48,16 +47,16 @@ const Header = () => {
 
           <div className={`navbar-links ${mobileMenuOpen ? "active" : ""}`}>
             <ul>
-              <li className="dropdown-container"> 
-                <NavLink
-                  to="/shop"
-                  className={activeTab === "shop" ? "active" : ""}
-                  onClick={(e) => {
+              <li className={`dropdown-container ${activeTab === "shop" ? "active" : ""}`} onClick={(e) => {
                     if (window.innerWidth <= 768) {
                       e.preventDefault();
                     }
                     setActiveTab("shop");
-                  }}
+                  }}>
+                <NavLink
+                  to="/shop"
+  
+                  
                 >
                   SHOP <i className="ri-arrow-down-s-line dropdown-arrow"></i>
                 </NavLink>
