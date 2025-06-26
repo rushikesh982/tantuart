@@ -62,17 +62,17 @@
 
 }
 
-.shop p {
-    font-size: 1vw;
-}
 
-.shop ul {
+
+
+
+.show-nav li a{
+    /* margin-top: 1vw; */
     list-style: none;
+    text-decoration: none;
     color: white;
-}
+    font-size: 1vw;
 
-.shop ul li {
-    margin-top: 1vw;
 }
 
 .useful-link {

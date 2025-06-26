@@ -1,13 +1,33 @@
 import React, { useState } from 'react'
+
 import './Footer.css'
 import footer_icon from '../Assets/headerLogo.png'
+import { NavLink } from 'react-router-dom'
 const Footer = () => {
   const [dropdown, setdropdown] = useState(false)
   const [shop, setshop] = useState(false)
   const [useful,setuseful] = useState(false)
   const [contact,setcontact] = useState(false)
 
+ const [activeTab, setActiveTab] = useState('/');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showPass, SetShowPass] = useState(false);
 
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+  // Shop categories data
+  const shopCategories = [
+    { name: "String Art", path: "string-art" },
+    { name: "Texture Art", path: "texture-art" },
+    { name: "Embroidery Art", path: "embroidery-art" },
+    { name: "Quartz Sand Art", path: "quartz-sand-art" },
+    { name: "Geometry Texture Art", path: "geometry-texture-art" },
+    { name: "Lippan Art", path: "lippan-art" },
+    { name: "Modern Art", path: "modern-art" },
+    { name: "Hand Painted Canvas", path: "hand-painted-canvas" },
+    { name: "3D Wall Art", path: "3d-wall-art" }
+  ];
   return (
     <div className="container-fluid footer-main">
       <div className="row">
@@ -29,11 +49,15 @@ const Footer = () => {
             <i className="ri-arrow-down-s-line"></i>
           </div>
           <ul className={shop ? "show" : ""}>
-            <li><p>Customisable</p></li>
-            <li><p>Quick Buy</p></li>
-            <li><p>Logos</p></li>
-            <li><p>Portrait</p></li>
-            <li><p>Workshop</p></li>
+              {shopCategories.map((item,idx)=>{
+                return(
+                   <>
+                      <div className="show-nav">
+                         <li  className='show-nav' ><NavLink to={item.path}><p>{item.name}</p></NavLink></li>
+                      </div>
+                   </>
+                )
+              })}
           </ul>
         </div>
         <div className="col-12 col-sm-12 col-md-6 col-lg-2 useful-link">
