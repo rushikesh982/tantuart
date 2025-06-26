@@ -7,6 +7,7 @@ const Header = () => {
   const [activeTab, setActiveTab] = useState('/');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showPass, SetShowPass] = useState(false);
+  const [showSearchBar,SetShowSearchbar] = useState(false);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -153,8 +154,9 @@ const Header = () => {
             >
               <i className="ri-account-circle-fill"></i>
             </button>
-            <button className="nav-icon" aria-label="Search">
-              <i className="ri-search-line"></i>
+            <button className="nav-icon d-block" aria-label="Search">
+              <i className="ri-search-line" onClick={()=>
+                {SetShowSearchbar(!showSearchBar)}}></i>
             </button>
             <NavLink to='/cart'>
               <button className="nav-icon" aria-label="Cart">
@@ -268,6 +270,15 @@ const Header = () => {
           </div>
         </div>
       </div>
+      <div className={`searchBox ${showSearchBar ? "showSearch" : ""}`}>
+  <input 
+    type="text" 
+    placeholder="Search..." 
+    aria-label="Search input"
+  />
+  <i className="ri-search-line" aria-hidden="true"></i>
+  <i className="ri-close-line" role="button" onClick={()=>{SetShowSearchbar(false)}} aria-label="Close search"></i>
+</div>
     </>
   );
 };
