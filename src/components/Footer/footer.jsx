@@ -4,14 +4,19 @@ import './Footer.css'
 import footer_icon from '../Assets/headerLogo.png'
 import { NavLink } from 'react-router-dom'
 const Footer = () => {
+  const [activeTab, setActiveTab] = useState('/');
   const [dropdown, setdropdown] = useState(false)
   const [shop, setshop] = useState(false)
-  const [useful,setuseful] = useState(false)
-  const [contact,setcontact] = useState(false)
-
- const [activeTab, setActiveTab] = useState('/');
+  const [useful, setuseful] = useState(false)
+  const [contact, setcontact] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showPass, SetShowPass] = useState(false);
+
+
+  const [email,setemail] = useState(false)
+
+  
+
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -49,24 +54,24 @@ const Footer = () => {
             <i className="ri-arrow-down-s-line"></i>
           </div>
           <ul className={shop ? "show" : ""}>
-              {shopCategories.map((item,idx)=>{
-                return(
-                   <>
-                      <div className="show-nav">
-                         <li  className='show-nav' ><NavLink to={item.path}><p>{item.name}</p></NavLink></li>
-                      </div>
-                   </>
-                )
-              })}
+            {shopCategories.map((item, idx) => {
+              return (
+                <>
+                  <div className="show-nav">
+                    <li className='show-nav' ><NavLink to={item.path}><p>{item.name}</p></NavLink></li>
+                  </div>
+                </>
+              )
+            })}
           </ul>
         </div>
         <div className="col-12 col-sm-12 col-md-6 col-lg-2 useful-link">
-         
-           <div className='responsive-icon' onClick={() => setuseful(!useful)}>
+
+          <div className='responsive-icon' onClick={() => setuseful(!useful)}>
             <h1>USEFUL LINK</h1>
             <i className="ri-arrow-down-s-line"></i>
           </div>
-          <ul className={useful? "show" : ""}>
+          <ul className={useful ? "show" : ""}>
             <li><p>Privacy & Policy</p></li>
             <li><p>Terms Of Use</p></li>
             <li><p>Refund Policy</p></li>
@@ -78,18 +83,18 @@ const Footer = () => {
           </ul>
         </div>
         <div className="col-12 col-sm-12 col-md-6 col-lg-4 contact-us">
-           <div className='responsive-icon' onClick={() => setcontact(!contact)}>
+          <div className='responsive-icon' onClick={() => setcontact(!contact)}>
             <h1>SIGN UP AND SAVE</h1>
             <i className="ri-arrow-down-s-line"></i>
           </div>
-          <ul className={contact?"show":""}>
+          <ul className={contact ? "show" : ""}>
             <li>
               <div className='email'>
-                <input type="text" name="" placeholder='Enter your email' id="" />
-                <i className="ri-mail-line"></i>
+                <input type="email" className='pl-2' name="" placeholder='Enter your email' onKeyDown={()=>setemail(true)} id="" />
+                         <span> {email?"Subcribe":<i className="ri-mail-line"></i>}</span>
               </div>
             </li>
-            <li><i className="ri-instagram-line"></i></li>
+            <li><a href="https://www.instagram.com/tantu_craft" target="_blank" rel="noopener noreferrer" ><i className="ri-instagram-line"></i></a></li>
           </ul>
         </div>
         <div className="col-12 footer-end">

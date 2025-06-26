@@ -155,12 +155,16 @@
 .contact-us i {
     font-size: 2vw;
 }
-
+.contact-us ul li a{
+    text-decoration: none;
+    color: white;
+}
 .footer-end {
     text-align: center;
     color: white;
     margin-top: 2vw;
 }
+
 
 @media (max-width:800px) {
     .company-info {
