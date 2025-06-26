@@ -240,7 +240,7 @@
 }
 
 .dropdown-arrow {
-  transition: transform 0.3s ease;
+  transition: 0.3s ease;
   margin-left: 5px;
 }
 

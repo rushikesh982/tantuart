@@ -79,7 +79,7 @@ const Contact = () => {
               <li>
                 {" "}
                 <div className="d-flex ">
-                  <i class="ri-mail-line"></i>
+                  <i className="ri-mail-line"></i>
                   <p>connect@craftsbazaar.store</p>
                 </div>
               </li>
