@@ -48,7 +48,7 @@ const Header = () => {
 
           <div className={`navbar-links ${mobileMenuOpen ? "active" : ""}`}>
             <ul>
-              <li className="dropdown-container">
+              <li className="dropdown-container"> 
                 <NavLink
                   to="/shop"
                   className={activeTab === "shop" ? "active" : ""}

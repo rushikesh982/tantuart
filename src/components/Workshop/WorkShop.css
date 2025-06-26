@@ -157,4 +157,50 @@
     font-weight: 800;
 
   }
+  .slide {
+  background-color: #f9f9f9;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  display: none;
+  /* Hidden by default */
+}
+
+.slide.active {
+  display: block;
+  /* Show active slide */
+}
+
+.stars {
+  color: gold;
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.review-content {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 20px;
+}
+
+.review-footer {
+  display: flex;
+  justify-content: space-between;
+  color: #777;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.review-title {
+  font-weight: bold;
+}
+
+.review-date {
+  opacity: 0.8;
+}
 }
