@@ -6,13 +6,13 @@ import { NavLink } from "react-router-dom";
 const Header = () => {
   const [activeTab, setActiveTab] = useState('/');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [showPass, SetShowPass] = useState(false);
-  const [showSearchBar,SetShowSearchbar] = useState(false);
+  const [showPass, setShowPass] = useState(false);
+  const [showSearchBar, setShowSearchbar] = useState(false);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
-  // Shop categories data
+
   const shopCategories = [
     { name: "String Art", path: "string-art" },
     { name: "Texture Art", path: "texture-art" },
@@ -41,23 +41,27 @@ const Header = () => {
       <header className="navbar">
         <div className="navbar-container">
           <div className="navbar-brand">
-            <NavLink to="/" onClick={() => setActiveTab("shop")}>
+            <NavLink to="/" onClick={() => setActiveTab("/")}>
               <img src={Logo} alt="Company Logo" className="navbar-logo" />
             </NavLink>
           </div>
 
-          <div className={`navbar-links ${mobileMenuOpen ? "active" : ""}`}>
+          <div 
+            className={`navbar-links ${mobileMenuOpen ? "active" : ""}`}
+            id="navbar-links"
+          >
             <ul>
-              <li className={`dropdown-container ${activeTab === "shop" ? "active" : ""}`} onClick={(e) => {
-                    if (window.innerWidth <= 768) {
-                      e.preventDefault();
-                    }
-                    setActiveTab("shop");
-                  }}>
+              <li className={`dropdown-container ${activeTab === "shop" ? "active" : ""}`}>
                 <NavLink
                   to="/shop"
-  
-                  
+                  onClick={(e) => {
+                    if (window.innerWidth <= 768) {
+                      e.preventDefault();
+                      const dropdown = e.currentTarget.nextElementSibling;
+                      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                    }
+                    setActiveTab("shop");
+                  }}
                 >
                   SHOP <i className="ri-arrow-down-s-line dropdown-arrow"></i>
                 </NavLink>
@@ -66,7 +70,7 @@ const Header = () => {
                     {shopCategories.map((category) => (
                       <NavLink
                         key={category.path}
-                        to={category.path}
+                        to={`/shop/${category.path}`}
                         className="dropdown-item"
                         onClick={() => {
                           setActiveTab(category.path);
@@ -154,9 +158,12 @@ const Header = () => {
             >
               <i className="ri-account-circle-fill"></i>
             </button>
-            <button className="nav-icon d-block" aria-label="Search">
-              <i className="ri-search-line" onClick={()=>
-                {SetShowSearchbar(!showSearchBar)}}></i>
+            <button 
+              className="nav-icon d-block" 
+              aria-label="Search"
+              onClick={() => setShowSearchbar(!showSearchBar)}
+            >
+              <i className="ri-search-line"></i>
             </button>
             <NavLink to='/cart'>
               <button className="nav-icon" aria-label="Cart">
@@ -168,16 +175,35 @@ const Header = () => {
               className="mobile-menu-toggle"
               onClick={toggleMobileMenu}
               aria-label="Toggle menu"
+              aria-expanded={mobileMenuOpen}
+              aria-controls="navbar-links"
             >
-              <i
-                className={`ri-${mobileMenuOpen ? "close-line" : "menu-line"}`}
-              ></i>
+              <i className={`ri-${mobileMenuOpen ? "close-line" : "menu-line"}`}></i>
             </button>
           </div>
         </div>
       </header>
 
-      {/* Modal */}
+      {/* Search Box */}
+      <div className={`searchBox ${showSearchBar ? "showSearch" : ""}`}>
+        <form action="">
+          <input 
+          type="text" 
+          placeholder="Search..." 
+          aria-label="Search input"
+        />
+        
+        <button type="submit">
+        <i className="ri-search-line" aria-hidden="true"></i>
+        </button>
+        </form>
+        <i 
+          className="ri-close-line" 
+          role="button" 
+          onClick={() => setShowSearchbar(false)} 
+          aria-label="Close search"
+        ></i>
+      </div>
       <div
         className="modal fade"
         id="exampleModal"
@@ -231,7 +257,7 @@ const Header = () => {
                   <input
                     className="form-check-input"
                     type="checkbox"
-                    onClick={() => SetShowPass(!showPass)}
+                    onClick={() => setShowPass(!showPass)}
                     id="flexCheckDefault"
                   />
                   <label
@@ -270,15 +296,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className={`searchBox ${showSearchBar ? "showSearch" : ""}`}>
-  <input 
-    type="text" 
-    placeholder="Search..." 
-    aria-label="Search input"
-  />
-  <i className="ri-search-line" aria-hidden="true"></i>
-  <i className="ri-close-line" role="button" onClick={()=>{SetShowSearchbar(false)}} aria-label="Close search"></i>
-</div>
     </>
   );
 };
