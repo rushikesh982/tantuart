@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./InteriorProjects.css";
 import { InteriorData } from "./InteriorData";
 import cardImg from "../Assets/workshop_photo.webp";
+import banner from '../Assets/banners_1.webp'
 
 const InteriorProjects = () => {
   const [showImage, setShowImage] = useState(false);
@@ -11,24 +12,22 @@ const InteriorProjects = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  const [ani, setani] = useState(false);
+    useEffect(() => {
+      setInterval(() => {
+        setani(true);
+      }, 200);
+    }, []);
+
   return (
     <div className="interior-projects-container">
       {/* Hero Banner */}
-      <div className="interior-hero">
-        {InteriorData[0] && (
-          <img
-            className={`interior-hero-image ${showImage ? "show" : ""}`}
-            src={InteriorData[0].img}
-            alt="Interior design showcase"
-            loading="eager"
-          />
-        )}
-        <div className="interior-hero-overlay">
-          <h1>Our Interior Projects</h1>
-          <p className="subtitle">Transforming spaces with innovative design</p>
-        </div>
-      </div>
-
+      <div className="col-12 contact-outer p-0 overflow-hidden">
+            <div className={`ani-contact ${ani ? "ani-show" : ""}`}>
+              <h1 className={`heading ${ani ? "show-heading" : ""}`}>INTERIOR PROJECTS
+              </h1>
+            </div>
+          </div>
       {/* Projects Grid */}
       <div className="projects-grid">
         {InteriorData.slice(1).map((item, index) => (
