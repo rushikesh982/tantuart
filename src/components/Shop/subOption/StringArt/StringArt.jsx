@@ -1,10 +1,11 @@
 import React from "react";
 import './StringArt.css'
+import Banner from "../../../Banner/Banner";
 
 export default function StringArt(){
     return(
         <>
-            <h1 className="text-dark">hello i am rushi</h1>
+            <Banner stringArt='String Art'/>
         </>
     )
 }

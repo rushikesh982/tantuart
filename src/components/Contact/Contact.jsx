@@ -1,25 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./Contact.css";
+import Banner from "../Banner/Banner";
 const Contact = () => {
-  const [ani, setani] = useState(false);
-  useEffect(() => {
-    setInterval(() => {
-      setani(true);
-    }, 200);
-  }, []);
+  
   return (
     <>
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-12 contact-outer p-0 overflow-hidden">
-            <div className={`ani-contact ${ani ? "ani-show" : ""}`}>
-              <h1 className={`heading ${ani ? "show-heading" : ""}`}>
-                WE ARE HERE FOR YOU
-              </h1>
-            </div>
-          </div>
-        </div>
-      </div>
+    <Banner contact='We Are Here For You'/>
       <div className="container">
         <div className="row contact-form">
           <div className="col-12  p-5  text-center text-dark">

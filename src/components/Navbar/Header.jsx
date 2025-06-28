@@ -53,7 +53,6 @@ const Header = () => {
             <ul>
               <li className={`dropdown-container ${activeTab === "shop" ? "active" : ""}`}>
                 <NavLink
-                  to="/shop"
                   onClick={(e) => {
                     if (window.innerWidth <= 768) {
                       e.preventDefault();
