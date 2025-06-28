@@ -12,6 +12,12 @@ import Cart from './components/cart/Cart';
 import StringArt from './components/Shop/subOption/StringArt/StringArt';
 import TextureArt from './components/Shop/subOption/TextureArt/TextureArt';
 import EmbroideryArt from './components/Shop/subOption/Embroidery/EmbroideryArt';
+import QuartzSandArt from './components/Shop/subOption/QuartzSandArt/QuartzSandArt';
+import GeometryTextureArt from './components/Shop/subOption/GeometryTextureArt/GeometryTextureArt';
+import LippanArt from './components/Shop/subOption/LippanArt/LippanArt';
+import ModernArt from './components/Shop/subOption/ModernArt/ModernArt';
+import HandPaintedCanvas from './components/Shop/subOption/HandPaintedCanvas/HandPaintedCanvas';
+import WallArt3d from './components/Shop/subOption/3dWallArt/WallArt3d';
 
 function App() {
   return (
@@ -28,6 +34,12 @@ function App() {
         <Route path='/string-art' element={<StringArt/>}></Route>
         <Route path='/texture-art' element={<TextureArt/>}></Route>
         <Route path='/embroidery-art' element={<EmbroideryArt/>}></Route>
+        <Route path='/quartz-sand-art' element={<QuartzSandArt/>}></Route>
+        <Route path='/geometry-texture-art' element={<GeometryTextureArt/>}/>
+        <Route path='/lippan-art' element={<LippanArt/>}/>
+        <Route path='/modern-art' element={<ModernArt/>}/>
+        <Route path='/hand-painted-canvas' element={<HandPaintedCanvas/>}/>
+        <Route path='/3d-wall-art' element={<WallArt3d/>}/>
       </Routes>
       <Footer />
     </BrowserRouter>
