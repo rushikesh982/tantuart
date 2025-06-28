@@ -70,7 +70,7 @@ const Header = () => {
                     {shopCategories.map((category) => (
                       <NavLink
                         key={category.path}
-                        to={`/shop/${category.path}`}
+                        to={`${category.path}`}
                         className="dropdown-item"
                         onClick={() => {
                           setActiveTab(category.path);
