@@ -1,10 +1,11 @@
 import React from "react";
+import Banner from "../../../Banner/Banner";
 
 export default function GeometryTextureArt()
 {
     return(
         <>
-        <h1>welcome Geometry texture art</h1>
+            <Banner GeometryTextureArt = 'Geometry Texture Art'/>
         </>
     )
 }

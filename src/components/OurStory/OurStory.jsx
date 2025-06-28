@@ -2,21 +2,13 @@ import React from 'react';
 import './OurStory.css';
 import storyBanner from '../Assets/banners_1.webp';
 import infoimg from '../Assets/ourstoryinfo.jpg';
+import Banner from '../Banner/Banner';
 
 const OurStory = () => {
   return (
     <div className="our-story">
       {/* Hero Banner */}
-      <section className="story-hero">
-        <div className="hero-image">
-          <img src={storyBanner} alt="Our company's story" />
-          <div className="hero-overlay">
-            <h1>Our Story</h1>
-            <p className="subtitle">Journey of passion and dedication</p>
-          </div>
-        </div>
-      </section>
-
+      <Banner OurStory='Our Story'/>
       {/* Introduction */}
       <section className="story-intro">
         <div className="container">

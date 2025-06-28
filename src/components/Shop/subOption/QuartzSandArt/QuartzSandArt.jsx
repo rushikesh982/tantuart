@@ -1,10 +1,11 @@
 import React from "react";
+import Banner from "../../../Banner/Banner";
 
 
 export default function QuartzSandArt(){
     return(
         <>
-        <h1>quarz sand art</h1>
+            <Banner QuartzSandArt='Quartz Sand Art'/>
         </>
     )
 }

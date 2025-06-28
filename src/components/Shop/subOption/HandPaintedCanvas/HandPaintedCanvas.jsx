@@ -1,12 +1,12 @@
 import React from "react";
+import Banner from "../../../Banner/Banner";
 
 
 export default function HandPaintedCanvas()
 {
     return(
         <>
-        <h1>welcome hand painted canvas</h1>
-        
+            <Banner HandPaintedCanvas='Hand Painted Canvas'/>
         </>
     )
 }

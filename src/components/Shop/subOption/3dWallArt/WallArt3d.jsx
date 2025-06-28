@@ -1,10 +1,11 @@
 import React from "react";
+import Banner from "../../../Banner/Banner";
 
 export default function WallArt3d()
 {
     return(
         <>
-        <h1>welcome 3d wall art</h1>
+        <Banner wallart3d="3D WallArt"/>
         </>
     )
 }
