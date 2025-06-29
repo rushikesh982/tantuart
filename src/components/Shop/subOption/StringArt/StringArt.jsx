@@ -1,6 +1,7 @@
 import React from "react";
 import './StringArt.css'
 import {String_art} from '../../../Assets/ShowContent'
+import Banner from "../../../Banner/Banner";
 
 export default function StringArt() {
     return (
@@ -46,6 +47,7 @@ export default function StringArt() {
                 ))}
             </div>
            </div>
+            <Banner stringArt='String Art'/>
         </>
     )
 }

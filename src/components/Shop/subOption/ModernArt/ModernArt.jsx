@@ -1,10 +1,11 @@
 import React from "react";
+import Banner from "../../../Banner/Banner";
 
 export default function ModernArt()
 {
     return(
         <>
-            <h1>welcome modern art</h1>
+            <Banner modernArt='Modern Art'/>
         </>
     )
 }

@@ -1,6 +1,8 @@
 import React from "react";
 import './EmbroideryArt.css'
-import { Embroidery_art } from "../../../Assets/ShowContent";
+import { Embroidery_art } from "../../../Assets/ShowContent"
+import Banner from "../../../Banner/Banner";
+
 export default function EmbroideryArt()
 {
     return(
@@ -46,6 +48,7 @@ export default function EmbroideryArt()
                 ))}
             </div>
            </div>
+        <Banner embroideryArt='Embroidery Art'/>
         </>
     )
 }

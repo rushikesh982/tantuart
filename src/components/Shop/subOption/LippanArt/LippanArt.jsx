@@ -1,11 +1,12 @@
 import React from "react";
+import Banner from "../../../Banner/Banner";
 
 
 export default function LippanArt()
 {
     return(
         <>
-        <h1>welcome lippan art</h1>
+        <Banner lippanArt='Lippan Art'/>
         </>
     )
 }

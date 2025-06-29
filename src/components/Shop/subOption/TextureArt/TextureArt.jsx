@@ -1,5 +1,7 @@
 import React from "react";
 import { TextTure_Art } from "../../../Assets/ShowContent";
+import Banner from "../../../Banner/Banner";
+
 export default function TextureArt()
 {
     return(
@@ -45,6 +47,7 @@ export default function TextureArt()
                             ))}
                         </div>
                        </div>
+            <Banner textureArt='Texture Art'/>
         </>
     )
 }

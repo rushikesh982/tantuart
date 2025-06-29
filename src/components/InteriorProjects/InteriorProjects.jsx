@@ -3,31 +3,15 @@ import "./InteriorProjects.css";
 import { InteriorData } from "./InteriorData";
 import cardImg from "../Assets/workshop_photo.webp";
 import banner from '../Assets/banners_1.webp'
+import Banner from "../Banner/Banner";
 
 const InteriorProjects = () => {
-  const [showImage, setShowImage] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setShowImage(true), 100);
-    return () => clearTimeout(timer);
-  }, []);
-
-  const [ani, setani] = useState(false);
-    useEffect(() => {
-      setInterval(() => {
-        setani(true);
-      }, 200);
-    }, []);
+ 
 
   return (
     <div className="interior-projects-container">
       {/* Hero Banner */}
-      <div className="col-12 contact-outer p-0 overflow-hidden">
-            <div className={`ani-contact ${ani ? "ani-show" : ""}`}>
-              <h1 className={`heading ${ani ? "show-heading" : ""}`}>INTERIOR PROJECTS
-              </h1>
-            </div>
-          </div>
+      <Banner interiorProject='Interior Projects'/>
       {/* Projects Grid */}
       <div className="projects-grid">
         {InteriorData.slice(1).map((item, index) => (

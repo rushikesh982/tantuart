@@ -44,8 +44,9 @@ const Footer = () => {
           <ul className={dropdown ? "show" : ""}>
             <li><img src={footer_icon} className='w-100' alt="" /></li>
             <li><p>Registered Office: STUDIOCB PVT LTDRajendra Nagar GZB UP 201005</p></li>
-            <li><p>Support Email: connect@craftsbazaar.store</p></li>
-            <li><p>Support Phone :+91 93150 73677</p></li>
+            <li><p>Support Email:<a className='text-light text-decoration-none' href="mailto:connect@craftsbazaar.store">connect@craftsbazaar.store</a>
+</p></li>
+            <li><p>Support Phone : <a className='text-light text-decoration-none' href="tel:+91 93150 73677">+91 93150 73677</a></p></li>
           </ul>
         </div>
         <div className="ccol-12 col-sm-12 col-md-6 col-lg-2 shop">
