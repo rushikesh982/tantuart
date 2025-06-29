@@ -14,8 +14,8 @@ const Header = () => {
   };
 
   const shopCategories = [
-    { name: "String Art", path: "string-art" },
-    { name: "Texture Art", path: "texture-art" },
+    { name: "String Art", path: "String-art" },
+    { name: "Texture Art", path: "texture-art"},
     { name: "Embroidery Art", path: "embroidery-art" },
     { name: "Quartz Sand Art", path: "quartz-sand-art" },
     { name: "Geometry Texture Art", path: "geometry-texture-art" },
