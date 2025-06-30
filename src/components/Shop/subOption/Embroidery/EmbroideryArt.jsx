@@ -7,6 +7,7 @@ export default function EmbroideryArt()
 {
     return(
         <>
+            <Banner embroideryArt='Embroidery Art'/>
              <div className="container-fluid mt-4">
              <div className="row g-4">
                 {Embroidery_art.items.map((item, idx) => (
@@ -48,7 +49,6 @@ export default function EmbroideryArt()
                 ))}
             </div>
            </div>
-        <Banner embroideryArt='Embroidery Art'/>
         </>
     )
 }

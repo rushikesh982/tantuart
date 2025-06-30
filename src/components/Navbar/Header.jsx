@@ -4,7 +4,7 @@ import Logo from "../Assets/footerLogo.webp";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
-  const [activeTab, setActiveTab] = useState('/');
+  const [activeTab, setActiveTab] = useState("/");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showPass, setShowPass] = useState(false);
   const [showSearchBar, setShowSearchbar] = useState(false);
@@ -15,14 +15,14 @@ const Header = () => {
 
   const shopCategories = [
     { name: "String Art", path: "String-art" },
-    { name: "Texture Art", path: "texture-art"},
+    { name: "Texture Art", path: "texture-art" },
     { name: "Embroidery Art", path: "embroidery-art" },
     { name: "Quartz Sand Art", path: "quartz-sand-art" },
     { name: "Geometry Texture Art", path: "geometry-texture-art" },
     { name: "Lippan Art", path: "lippan-art" },
     { name: "Modern Art", path: "modern-art" },
     { name: "Hand Painted Canvas", path: "hand-painted-canvas" },
-    { name: "3D Wall Art", path: "3d-wall-art" }
+    { name: "3D Wall Art", path: "3d-wall-art" },
   ];
 
   useEffect(() => {
@@ -46,18 +46,35 @@ const Header = () => {
             </NavLink>
           </div>
 
-          <div 
+          <div
             className={`navbar-links ${mobileMenuOpen ? "active" : ""}`}
             id="navbar-links"
           >
             <ul>
-              <li className={`dropdown-container ${activeTab === "shop" ? "active" : ""}`}>
+              <li>
+                <NavLink
+                  to="/"
+                  className={activeTab === "home" ? "active" : ""}
+                  onClick={() => {
+                    setActiveTab("home");
+                    setMobileMenuOpen(false);
+                  }}
+                >
+                  HOME
+                </NavLink>
+              </li>
+              <li
+                className={`dropdown-container ${
+                  activeTab === "shop" ? "active" : ""
+                }`}
+              >
                 <NavLink
                   onClick={(e) => {
                     if (window.innerWidth <= 768) {
                       e.preventDefault();
                       const dropdown = e.currentTarget.nextElementSibling;
-                      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                      dropdown.style.display =
+                        dropdown.style.display === "block" ? "none" : "block";
                     }
                     setActiveTab("shop");
                   }}
@@ -157,14 +174,14 @@ const Header = () => {
             >
               <i className="ri-account-circle-fill"></i>
             </button>
-            <button 
-              className="nav-icon d-block" 
+            <button
+              className="nav-icon d-block"
               aria-label="Search"
               onClick={() => setShowSearchbar(!showSearchBar)}
             >
               <i className="ri-search-line"></i>
             </button>
-            <NavLink to='/cart'>
+            <NavLink to="/cart">
               <button className="nav-icon" aria-label="Cart">
                 <i className="ri-shopping-cart-2-line"></i>
                 <span className="cart-badge">0</span>
@@ -177,7 +194,9 @@ const Header = () => {
               aria-expanded={mobileMenuOpen}
               aria-controls="navbar-links"
             >
-              <i className={`ri-${mobileMenuOpen ? "close-line" : "menu-line"}`}></i>
+              <i
+                className={`ri-${mobileMenuOpen ? "close-line" : "menu-line"}`}
+              ></i>
             </button>
           </div>
         </div>
@@ -186,20 +205,20 @@ const Header = () => {
       {/* Search Box */}
       <div className={`searchBox ${showSearchBar ? "showSearch" : ""}`}>
         <form action="">
-          <input 
-          type="text" 
-          placeholder="Search..." 
-          aria-label="Search input"
-        />
-        
-        <button type="submit">
-        <i className="ri-search-line" aria-hidden="true"></i>
-        </button>
+          <input
+            type="text"
+            placeholder="Search..."
+            aria-label="Search input"
+          />
+
+          <button type="submit">
+            <i className="ri-search-line" aria-hidden="true"></i>
+          </button>
         </form>
-        <i 
-          className="ri-close-line" 
-          role="button" 
-          onClick={() => setShowSearchbar(false)} 
+        <i
+          className="ri-close-line"
+          role="button"
+          onClick={() => setShowSearchbar(false)}
           aria-label="Close search"
         ></i>
       </div>
