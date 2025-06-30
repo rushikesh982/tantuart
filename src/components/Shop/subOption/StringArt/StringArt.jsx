@@ -6,6 +6,7 @@ import Banner from "../../../Banner/Banner";
 export default function StringArt() {
     return (
         <>
+            <Banner stringArt='String Art'/>
            <div className="container-fluid mt-4">
              <div className="row g-4">
                 {String_art.items.map((item, idx) => (
@@ -47,7 +48,6 @@ export default function StringArt() {
                 ))}
             </div>
            </div>
-            <Banner stringArt='String Art'/>
         </>
     )
 }

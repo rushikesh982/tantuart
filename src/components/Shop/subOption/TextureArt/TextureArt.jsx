@@ -6,6 +6,7 @@ export default function TextureArt()
 {
     return(
         <>
+            <Banner textureArt='Texture Art'/>
              <div className="container-fluid mt-4">
                          <div className="row g-4">
                             {TextTure_Art.items.map((item, idx) => (
@@ -47,7 +48,6 @@ export default function TextureArt()
                             ))}
                         </div>
                        </div>
-            <Banner textureArt='Texture Art'/>
         </>
     )
 }
